@@ -37,6 +37,7 @@ export default function checkInitializeProjectSettings(): void {
   }
 
   if (
+    !process.env.MONGO_URI ||
     !process.env.DB_HOST ||
     !process.env.DB_NAME ||
     !process.env.DB_USER ||

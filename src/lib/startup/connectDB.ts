@@ -28,6 +28,7 @@ if (env === 'development') {
 
 export default (): Promise<typeof mongoose | undefined> => {
   if (
+    !process.env.MONGO_URI ||
     !process.env.DB_HOST ||
     !process.env.DB_NAME ||
     !process.env.DB_USER ||
@@ -36,13 +37,15 @@ export default (): Promise<typeof mongoose | undefined> => {
     return new Promise((res) => {
       res();
     });
+  } else if (process.env.MONGO_URI) {
+    return mongoose.connect(process.env.MONGO_URI);
+  } else {
+    return mongoose.connect(mongoURL, {
+      ...auth,
+      dbName,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false,
+    });
   }
-
-  return mongoose.connect(mongoURL, {
-    ...auth,
-    dbName,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  });
 };
