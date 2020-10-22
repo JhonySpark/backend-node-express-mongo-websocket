@@ -1,0 +1,17 @@
+.DS_Store
+node_modules
+
+.env
+yarn-error.log
+
+.idea
+
+tmp
+
+package-lock.json
+
+dist
+
+.pnp.js
+
+.yarn

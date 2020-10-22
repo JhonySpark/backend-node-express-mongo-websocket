@@ -1,0 +1,26 @@
+{
+  "presets": ["@babel/preset-typescript", "@babel/preset-env"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@src": "./src",
+          "@models": "./src/models",
+          "@lib": "./src/lib",
+          "@error": "./src/error",
+          "@util": "./src/util"
+        }
+      }
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ],
+    "@babel/plugin-proposal-class-properties"
+  ],
+  "ignore": ["./src/__tests__"]
+}
