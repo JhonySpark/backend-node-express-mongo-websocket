@@ -1,26 +1,23 @@
-# Typescript-Node-Express-Mongodb-backend
-
-## Readme for other languages
-
-### [한국어 리드미 (만료됨 - 영어 문서를 참고해주세요.)](https://github.com/WebBoilerplates/Typescript-Node-Express-Mongodb-backend/blob/master/README_ko.md)
-
-### Description
-
-Backend boilerplate codes for developing backend by typescript
-
-### Informations
-
-Default database package is currently [<b>Mongoose</b>](https://www.npmjs.com/package/mongoose)<br/>
-You must modify your code on your own to execute without mongoose.
-
-## Cloning
-
-<code>git clone --depth 1 --single-branch https://github.com/WebBoilerplates/Typescript-Node-Express-Mongodb-backend "Your project name"</code>
-
-# How to use
+# backend-node-express-mongo-websocket
 
 
-## 1. HTTP Router (Express based)
+### Descrição
+
+Backend boilerplate com códigos prontos para uso em typescript com suporte ao mongoDB, websocket, etc.
+
+### Informações
+
+O projeto está configurado por padrão com o MongoDB e Mongoose: [<b>Mongoose</b>](https://www.npmjs.com/package/mongoose)<br/>
+Para utilizar outro driver ou banco você deve fazer a implementação por contra prória no projeto.
+
+## Clonando
+
+<code>git clone --depth 1 --single-branch https://github.com/JhonySpark/backend-node-express-mongo-websocket/ "Nome do seu projeto"</code>
+
+# Como utilizar
+
+
+## 1. HTTP Router (Baseado em Express)
 
 Place your file in routes like :
 <code>/routes/YOUR_ROUTE/index.controller/router.ts</code><br/>
